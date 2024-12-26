@@ -1,2 +1,2 @@
-# kdt-js
-(KDT 과정) JavaScript
+### KDT - WEB
+#### 2024.12.26 ~ 
