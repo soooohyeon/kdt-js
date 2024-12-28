@@ -1,0 +1,30 @@
+/* (1) */
+/* .container-wrap {} */
+
+/* (2) */
+/* .container-wrap {
+    display: flex;
+} */
+
+/* (3) */
+/* .container-wrap {
+    display: flex;
+    position: relative;
+    top: 35vh;
+} */
+
+/* (4) */
+.container-wrap {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 35vh;
+}
+
+.content {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    background-color: lightblue;
+}
