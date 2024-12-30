@@ -8,7 +8,7 @@ console.log(arr1, typeof arr1); //[] object
 arr1[0] = 10;
 arr1[1] = '가나다';
 arr1[10]= true;
-console.log(arr1, typeof arr1); //[ 10, '가나다' ] object
+console.log(arr1, typeof arr1); // [ 10, '가나다', <8 empty items>, true ] object
 
 //초기값 할당
 let arr2 = [1, 2, 3];

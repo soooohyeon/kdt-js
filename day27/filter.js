@@ -35,5 +35,5 @@ console.log(evenVal);   // [ 4, 8, 12, 16, 20 ]
 const evenVal2 = numbers.filter((element) => {
   element % 2 === 0
 }).map((element) => element * 2);
-console.log(evenVal2);
+console.log("결과 : " + evenVal2);
 
