@@ -27,55 +27,66 @@
   const btn04 = document.querySelector("#button4");
   const btnCount = [0, 0, 0, 0];
   const btnColor = ['red', 'blue', 'yellow', 'lightblue', 'orange', 'pink'];
+  
 
-  btn01.addEventListener("click", function(){
-    btnCount[0]++;
-    btn01.setAttribute('style', `background-color:${btnColor[(btnCount[0]) % btnColor.length]}`);
-    console.log("btn 01 클릭 수 : " + btnCount[0]);
-  });
-  btn02.addEventListener("click", function(){
-    btnCount[1]++;
-    btn02.setAttribute('style', `background-color:${btnColor[(btnCount[1]) % btnColor.length]}`);
-    console.log("btn 02 클릭 수 : " + btnCount[1]);
-  });
-  btn03.addEventListener("click", function(){
-    btnCount[2]++;
-    btn03.setAttribute('style', `background-color:${btnColor[(btnCount[2]) % btnColor.length]}`);
-    console.log("btn 03 클릭 수 : " + btnCount[2]);
-  });
-  btn04.addEventListener("click", function(){
-    btnCount[3]++;
-    btn04.setAttribute('style', `background-color:${btnColor[(btnCount[3]) % btnColor.length]}`);
-    console.log("btn 04 클릭 수 : " + btnCount[3]);
-  });
+  // btn01.addEventListener("click", function(){
+  //   btnCount[0]++;
+  //   btn01.setAttribute('style', `background-color:${btnColor[(btnCount[0]) % btnColor.length]}`);
+  //   console.log("btn 01 클릭 수 : " + btnCount[0]);
+  // });
+  // btn02.addEventListener("click", function(){
+  //   btnCount[1]++;
+  //   btn02.setAttribute('style', `background-color:${btnColor[(btnCount[1]) % btnColor.length]}`);
+  //   console.log("btn 02 클릭 수 : " + btnCount[1]);
+  // });
+  // btn03.addEventListener("click", function(){
+  //   btnCount[2]++;
+  //   btn03.setAttribute('style', `background-color:${btnColor[(btnCount[2]) % btnColor.length]}`);
+  //   console.log("btn 03 클릭 수 : " + btnCount[2]);
+  // });
+  // btn04.addEventListener("click", function(){
+  //   btnCount[3]++;
+  //   btn04.setAttribute('style', `background-color:${btnColor[(btnCount[3]) % btnColor.length]}`);
+  //   console.log("btn 04 클릭 수 : " + btnCount[3]);
+  // });
 
-  // ------- 강사님 풀이 -------
-  //색상 객체
-  const colors = {
-    button1 : 'red', 
-    button2 : 'blue', 
-    button3 : 'green',
-    button4 : 'yellow'
-  };
-
-  //클릭횟수를 저장하는 객체
-  const clickCount = {};
-
-  //모든 버튼에 이벤트 리스너 추가
-  document.querySelectorAll('button').forEach(button => {
-    //각 버튼의 클릭 횟수 0으로 초기화
-    clickCount[button.id] = 0;
-    //클릭 이벤트 추가
-    button.addEventListener('click', ()=>{
-      //클릭횟수 추가
-      clickCount[button.id]++;
-      //배경색 변경
-      button.style.backgroundColor = colors[button.id];
-      //콘솔에 클릭횟수 출력
-      console.log(`${button.id} 클릭 ${clickCount[button.id]}번`);
-      
+// 위 코드 줄임
+  const buttons = document.querySelectorAll("button");
+  buttons.forEach((btn, idx) => {
+    btn.addEventListener("click", function() {
+      btnCount[idx]++;
+      btn.style.backgroundColor = btnColor[btnCount[idx] % btnColor.length];
+      console.log((idx + 1) + "번 버튼 클릭 수 : " + btnCount[idx]);
     });
-  })
+  });
+
+  // // ------- 강사님 풀이 -------
+  // //색상 객체
+  // const colors = {
+  //   button1 : 'red', 
+  //   button2 : 'blue', 
+  //   button3 : 'green',
+  //   button4 : 'yellow'
+  // };
+
+  // //클릭횟수를 저장하는 객체
+  // const clickCount = {};
+
+  // //모든 버튼에 이벤트 리스너 추가
+  // document.querySelectorAll('button').forEach(button => {
+  //   //각 버튼의 클릭 횟수 0으로 초기화
+  //   clickCount[button.id] = 0;
+  //   //클릭 이벤트 추가
+  //   button.addEventListener('click', ()=>{
+  //     //클릭횟수 추가
+  //     clickCount[button.id]++;
+  //     //배경색 변경
+  //     button.style.backgroundColor = colors[button.id];
+  //     //콘솔에 클릭횟수 출력
+  //     console.log(`${button.id} 클릭 ${clickCount[button.id]}번`);
+      
+  //   });
+  // })
 
 </script>
 </html>
