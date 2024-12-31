@@ -1,0 +1,29 @@
+<!-- 17. 키 이벤트 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>키 이벤트</title>
+</head>
+<body>
+  <input type="text" name="name" placeholder="이름을 입력하세요">
+  <p id="name"></p>
+</body>
+<script>
+  const name = document.querySelector("input[name='name']");
+  const p = document.querySelector("#name");
+
+  // keyup : 사용자가 키를 눌렀다가 손을 땔 때 발생, 입력 필드에 내용이 반영된 후 이벤트 발생
+  // keydown : 사용자가 키를 누르는 순간 발생
+  // keypress : 최신 버전에서는 keypress보다 keyup이나 keydown 권장, 문자 입력 중심의 이벤트
+  // name.addEventListener("keydown", (e) => {  // 한박자씩 늦게 실행
+  // name.addEventListener("keypress", (e) => {   // 엔터를 누르면 실행
+  name.addEventListener("keyup", (e) => {   // 키를 누름과 동시 실행
+    // e : 이벤트 객체, 이벤트 핸들러로 전달된 객체로 이벤트와 관련된 정보 포함됨
+    p.innerText = e.target.value;
+    // e.target : 이벤트가 발생한 요소 (현재에서는 name이라는 name을 가진 입력 필드)
+    // e.target.value : 이벤트가 발생한 입력 필드의 현재값을 가져옴
+  });
+</script>
+</html>
