@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>깊이 빠져 보다, CGV</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./../css/cgv-header.css">
+    <link rel="stylesheet" href="./../css/cgv-main.css">
+    <!-- JS -->
+    <script defer src="./../js/cgv.js"></script>
+    <!-- 폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dongle&family=Gaegu&family=Jua&family=Noto+Sans+KR:wght@100..900&family=Sunflower:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="wrap">
+        <!-- 최상단 광고 배너 -->
+        <div id="ad-wrap-top-container">
+            <div id="ad-wrap-top">
+                <!-- 해당 광고 연결 경로 -->
+                <a href="#">
+                    <!-- 광고 배너 이미지 -->
+                    <img src="https://adimg.cgv.co.kr/images/202412/HARBIN/1224_980x80.png" alt="하얼빈">
+                </a>
+                <!-- 광고 배너 닫기 -->
+                <a href="#" class="ad-top-close">
+                    <img src="https://img.cgv.co.kr/sample/2015/ad_main_top/btn_ad_close.png" alt="닫기">
+                </a>
+            </div>
+        </div>
+
+        <!-- 헤더(메뉴 포함) -->
+        <header>
+            <div id="header-top-wrap">
+                <div class="header-wrap contents">
+                    <!-- 로고 -->
+                    <h1 class="header-title">
+                        <a href="#">
+                            <img src="https://img.cgv.co.kr/R2014/images/common/logo/logoRed.png" alt="CGV">
+                        </a>
+                        <span>DEEP DIVE SPACE</span>
+                    </h1>
+                    <!-- 로그인, 고객센터 등 회원 정보 관련 메뉴 -->
+                    <ul class="member-menu--wrap">
+                        <div class="mini-ad">
+                            <a href="#">
+                                <img src="https://img.cgv.co.kr/WingBanner/2023/0208/16758461047540.png" alt="카드 광고">
+                            </a>
+                        </div>
+                        <li>
+                            <a href="#" class="header-memeber--menu">
+                                <img src="https://img.cgv.co.kr/R2014/images/common/ico/loginPassword.png" alt="로그인">
+                                <span>로그인</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="header-memeber--menu">
+                                <img src="https://img.cgv.co.kr/R2014/images/common/ico/loginJoin.png" alt="회원가입">
+                                <span>회원가입</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="header-memeber--menu">
+                                <img src="https://img.cgv.co.kr/R2014/images/common/ico/loginMember.png" alt="MY CGV">
+                                <span>MY CGV</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="header-memeber--menu">
+                                <img src="https://img.cgv.co.kr/R2014/images/common/ico/loginCustomer.png" alt="고객센터">
+                                <span>고객센터</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 메뉴 -->
+            <nav id="header-bottom-wrap">
+                <div class="contents">
+                    <ul class="nav-menu--wrap">
+                        <li>
+                            <h2><a href="#">영화</a></h2>
+                            <dl class="nav-dropMenu--wrap">
+                                <dt><h2><a href="#">영화</a></h2></dt>
+                                <dd>
+                                    <h3>
+                                        <a href="#">무비차트</a>
+                                    </h3>
+                                </dd>
+                                <dd>
+                                    <h3>
+                                        <a href="#">아트하우스</a>
+                                    </h3>
+                                </dd>
+                                <dd>
+                                    <h3>
+                                        <a href="#">ICECON</a>
+                                    </h3>
+                                </dd>
+                            </dl>
+                        </li>
+
+                        <li>
+                            <h2><a href="#">극장</a></h2>
+                            <dl class="nav-dropMenu--wrap">
+                                <dt><h2><a href="#">극장</a></h2></dt>
+                                <dd>
+                                    <h3>
+                                        <a href="#">CGV 극장</a>
+                                    </h3>
+                                </dd>
+                                <dd>
+                                    <h3>
+                                        <a href="#">특별관</a>
+                                    </h3>
+                                </dd>
+                            </dl>
+                        </li>
+
+                        <li>
+                            <h2><a href="#"><strong>예매</strong></a></h2>
+                            <dl class="nav-dropMenu--wrap">
+                                <dt><h2><a href="#">예매</a></h2></dt>
+                                <dd>
+                                    <h3>
+                                        <a href="#">빠른예매</a>
+                                    </h3>
+                                </dd>
+                                <dd>
+                                    <h3>
+                                        <a href="#">상영스케줄</a>
+                                    </h3>
+                                </dd>
+                                <dd>
+                                    <h3>
+                                        <a href="#">English Ticketing</a>
+                                    </h3>
+                                </dd>
+                                <dd>
+                                    <h3>
+                                        <a href="#">English Schedule</a>
+                                    </h3>
+                                </dd>
+                            </dl>
+                        </li>
+
+                        <li>
+                            <h2><a href="#">스토어</a></h2>
+                            <dl class="nav-dropMenu--wrap">
+                                <dt><h2><a href="#">스토어</a></h2></dt>
+                                <dd>
+                                    <h3>
+                                        <a href="#">패키지</a>
+                                    </h3>
+                                </dd>
+                                <dd>
+                                    <h3>
+                                        <a href="#">영화관람권</a>
+                                    </h3>
+                                </dd>
+                                <dd>
+                                    <h3>
+                                        <a href="#">기프트카드</a>
+                                    </h3>
+                                </dd>
+                                <dd>
+                                    <h3>
+                                        <a href="#">콤보</a>
+                                    </h3>
+                                </dd>
+                                <dd>
+                                    <h3>
+                                        <a href="#">팝콘</a>
+                                    </h3>
+                                </dd>
+                                <dd>
+                                    <h3>
+                                        <a href="#">음료</a>
+                                    </h3>
+                                </dd>
+                                <dd>
+                                    <h3>
+                                        <a href="#">스낵</a>
+                                    </h3>
+                                </dd>
+                                <dd>
+                                    <h3>
+                                        <a href="#">플레이존</a>
+                                    </h3>
+                                </dd>
+                                <dd>
+                                    <h3>
+                                        <a href="#">씨네샵</a>
+                                    </h3>
+                                </dd>
+                            </dl>
+                        </li>
+
+                        <li>
+                            <h2><a href="#">이벤트</a></h2>
+                            <dl class="nav-dropMenu--wrap">
+                                <dt><h2><a href="#">이벤트</a></h2></dt>
+                                <dd>
+                                    <h3>
+                                        <a href="#"> SPECIAL</a>
+                                    </h3>
+                                </dd>
+                                <dd>
+                                    <h3>
+                                        <a href="#">영화/예매</a>
+                                    </h3>
+                                </dd>
+                                <dd>
+                                    <h3>
+                                        <a href="#">멤버십/CLUB</a>
+                                    </h3>
+                                </dd>
+                                <dd>
+                                    <h3>
+                                        <a href="#">CGV 극장별</a>
+                                    </h3>
+                                </dd>
+                                <dd>
+                                    <h3>
+                                        <a href="#">제휴할인</a>
+                                    </h3>
+                                </dd>
+                                <dd>
+                                    <h3>
+                                        <a href="#">당첨자 발표</a>
+                                    </h3>
+                                </dd>
+                                <dd>
+                                    <h3>
+                                        <a href="#">종료된 이벤트</a>
+                                    </h3>
+                                </dd>
+                            </dl>
+                        </li>
+
+                        <li>
+                            <h2><a href="#">혜택</a></h2>
+                            <dl class="nav-dropMenu--wrap">
+                                <dt><h2><a href="#">혜택</a></h2></dt>
+                                <dd>
+                                    <h3>
+                                        <a href="#">CGV 할인정보</a>
+                                    </h3>
+                                </dd>
+                                <dd>
+                                    <h3>
+                                        <a href="#">CLUB 서비스</a>
+                                    </h3>
+                                </dd>
+                                <dd>
+                                    <h3>
+                                        <a href="#">VIP 라운지</a>
+                                    </h3>
+                                </dd>
+                            </dl>
+                        </li>
+                    </ul>
+                    <div class="search-wrap">
+                        <label><input type="text" id="search" placeholder="뽀로로극장판"></label>
+                        <button class="search-btn"></button>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- 컨텐츠 -->
+        <main>
+            <!-- 메인 배너 -->
+            <div id="main-banner--wrap">
+                <div class="contents">
+                    <div class="ad-movie--wrap">
+                        <div class="ad-movie--img">
+                            <img src="./../img/하얼빈.png" alt="영화광고">
+                        </div>
+                        <strong class="ad-movie-title">하얼빈</strong>
+                        <span class="ad-movie-content">
+                            "지금 가장 의미있는 영화"<br>긴 여운 X 큰 울림! 예매 ▶
+                        </span>
+                        <div class="ad-movie-link--wrap">
+                            <a href="#" class="ad-movie-detail">상세보기</a>
+                            <a name="adBtn" class="ad-movie-button ad-play"></a>
+                            <a name="adBtn" class="ad-movie-button ad-volumeOff"></a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <!-- 무비차트 | 상영예정작 -->
+            <div class="movie-chart--wrap">
+                <div class="contents">
+
+                    <!-- 무비차트 | 상영예정작 제목 -->
+                    <div class="movie-chartBtn--wrap">
+                        <div class="chartBtn--wrap">
+                            <h3>
+                                <a href="#none" id="afterMovie" class="active">무비차트</a>
+                            </h3>
+                            <h3>
+                                <a href="#none" id="beforeMovie">상영예정작</a>
+                            </h3>
+                        </div>
+                        <a href="#none" id="movieChartAll">전체보기</a>
+                    </div>
+
+                    
+                    <!-- 무비차트 리스트 -->
+                    <div class="swiper mobieChart_list" id="afterMovie_wrap">
+                        <div class="swiperBtn pre_swiperBtn"></div>
+
+                        <div class="swiperLists_wrap">
+                            
+                            <div class="movieChart_wrap">
+                                <di class="img_wrap">
+                                    <div class="img_content">
+                                        <img src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000088/88797/88797_320.jpg" alt="">
+                                        <div class="ageLimit_wrap">
+                                            <i class="ageLimit age15">15</i>
+                                        </div>
+                                    </div>
+                                    <span class="chartNum">1</span>
+                                    <!-- ↓ 마우스 오버시 나타남 -->
+                                    <div class="detailLink-wrap">
+                                        <a href="#none" class="chartDetailBtn">상세보기</a>
+                                        <a href="#none" class="reservationBtn">예매하기</a>
+                                    </div>
+                                </di>
+                                <div class="movieInfo_wrap">
+                                    <strong class="movieTitle">하얼빈</strong>
+                                    <span>
+                                        <img src="https://img.cgv.co.kr/R2014/images/common/egg/eggGoldenegggood.png" alt="">
+                                        89%
+                                    </span>
+                                    <span>
+                                        예매율 34.5%
+                                    </span>
+                                </div>
+                            </div>
+                            
+                            <div class="movieChart_wrap">
+                                <di class="img_wrap">
+                                    <div class="img_content">
+                                        <img src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000089/89330/89330_320.jpg" alt="">
+                                        <div class="ageLimit_wrap">
+                                            <i class="ageLimit age15">15</i>
+                                        </div>
+                                    </div>
+                                    <span class="chartNum">2</span>
+                                    <!-- ↓ 마우스 오버시 나타남 -->
+                                    <div class="detailLink-wrap">
+                                        <a href="#none" class="chartDetailBtn">상세보기</a>
+                                        <a href="#none" class="reservationBtn">예매하기</a>
+                                    </div>
+                                </di>
+                                <div class="movieInfo_wrap">
+                                    <strong class="movieTitle">보고타: 마지막 기회의 땅</strong>
+                                    <span>
+                                        <img src="https://img.cgv.co.kr/R2014/images/common/egg/eggGoldenegggood.png" alt="">
+                                        80%
+                                    </span>
+                                    <span>
+                                        예매율 16.9%
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="movieChart_wrap">
+                                <di class="img_wrap">
+                                    <div class="img_content">
+                                        <img src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000089/89323/89323_320.jpg" alt="">
+                                        <div class="ageLimit_wrap">
+                                            <i class="ageLimit ageAll">All</i>
+                                        </div>
+                                    </div>
+                                    <span class="chartNum">3</span>
+                                    <!-- ↓ 마우스 오버시 나타남 -->
+                                    <div class="detailLink-wrap">
+                                        <a href="#none" class="chartDetailBtn">상세보기</a>
+                                        <a href="#none" class="reservationBtn">예매하기</a>
+                                    </div>
+                                </di>
+                                <div class="movieInfo_wrap">
+                                    <strong class="movieTitle">수퍼 소닉3</strong>
+                                    <span>
+                                        <img src="https://img.cgv.co.kr/R2014/images/common/egg/eggGoldenegggood.png" alt="">
+                                        99%
+                                    </span>
+                                    <span>
+                                        예매율 8.0%
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="movieChart_wrap">
+                                <di class="img_wrap">
+                                    <div class="img_content">
+                                        <img src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000089/89099/89099_320.jpg" alt="">
+                                        <div class="ageLimit_wrap">
+                                            <i class="ageLimit ageAll">All</i>
+                                        </div>
+                                    </div>
+                                    <span class="chartNum">4</span>
+                                    <!-- ↓ 마우스 오버시 나타남 -->
+                                    <div class="detailLink-wrap">
+                                        <a href="#none" class="chartDetailBtn">상세보기</a>
+                                        <a href="#none" class="reservationBtn">예매하기</a>
+                                    </div>
+                                </di>
+                                <div class="movieInfo_wrap">
+                                    <strong class="movieTitle">뽀로로 극장판 바닷속 대모험</strong>
+                                    <span>
+                                        <img src="https://img.cgv.co.kr/R2014/images/common/egg/eggGoldenegggood.png" alt="">
+                                        99%
+                                    </span>
+                                    <span>
+                                        예매율 5.7%
+                                    </span>
+                                </div>
+                            </div>
+                            
+                            <div class="movieChart_wrap">
+                                <di class="img_wrap">
+                                    <div class="img_content">
+                                        <img src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000089/89330/89330_320.jpg" alt="">
+                                        <div class="ageLimit_wrap">
+                                            <i class="ageLimit age15">15</i>
+                                        </div>
+                                    </div>
+                                    <span class="chartNum">5</span>
+                                    <!-- ↓ 마우스 오버시 나타남 -->
+                                    <div class="detailLink-wrap">
+                                        <a href="#none" class="chartDetailBtn">상세보기</a>
+                                        <a href="#none" class="reservationBtn">예매하기</a>
+                                    </div>
+                                </di>
+                                <div class="movieInfo_wrap">
+                                    <strong class="movieTitle">시빌 워: 분열의 시대</strong>
+                                    <span>
+                                        <img src="https://img.cgv.co.kr/R2014/images/common/egg/eggGoldenegggood.png" alt="">
+                                        88%
+                                    </span>
+                                    <span>
+                                        예매율 5.3%
+                                    </span>
+                                </div>
+                            </div>
+
+                            
+                        </div>
+                        <div class="swiperBtn next_swiperBtn"></div>
+
+                    </div>
+
+                </div>
+            </div>
+        </main>
+
+        <footer>
+
+        </footer>
+    </div>
+</body>
+</html>

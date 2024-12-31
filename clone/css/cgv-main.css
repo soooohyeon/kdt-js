@@ -1,0 +1,358 @@
+/* 중간 컨텐츠 */
+main {
+    position: relative;
+    width: 100%;
+    margin-top: 50px;
+    /* z-index: 7; */
+}
+
+/* ------- 메인 배너 ------- */
+#main-banner--wrap {
+    position: relative;
+    height: 498px;
+    background-color: #000;
+}
+
+.ad-movie--wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.ad-movie--img {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+
+.ad-movie--img > img {
+    position: absolute;
+    width: 100%;
+    transform: translate(0, -15%);
+}
+
+.ad-movie-title {
+    position: absolute;
+    top: 170px;
+    left: 0;
+    font-weight: 700;
+    font-size: 40px;
+    color: #fff;
+    line-height: 1.450em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.72);
+    pointer-events: none;
+}
+
+.ad-movie-content {
+    overflow: hidden;
+    position: absolute;
+    top: 239px;
+    font-size: 20px;
+    color: #fff;
+    line-height: 1.450em;
+    pointer-events: none;
+}
+
+.ad-movie-link--wrap {
+    display: inline-flex;
+    position: absolute;
+    top: 315px;
+    left: 3px;
+}
+
+.ad-movie-detail {
+    display: block;
+    padding: 5px 30px 5px 18px;
+    color: #343434;
+    background: rgba(255, 255, 255, 0.8) url(./../img/arrowR.png) calc(100% - 11px) center / 8px 13px scroll no-repeat;
+    border-radius: 15px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.55em;
+}
+
+.ad-movie-button {
+    display: block;
+    margin-left: 10px;
+    width: 28px;
+    height: 28px;
+    font-size: 0;
+    border: 1px solid #979797;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.ad-play {
+    background: url(./../img/play.png) center / 18px scroll no-repeat;
+}
+.ad-pause {
+    background: url(./../img/pause.png) center / 18px scroll no-repeat;
+}
+.ad-volumeOff {
+    background: url(./../img/soundOff.png) center / 18px scroll no-repeat;
+}
+.ad-volumeOn {
+    background: url(./../img/soundOn.png) center / 18px scroll no-repeat;
+}
+
+/* --------------------------------------------------------------------- */
+/* ------- 무비차트 | 상영예정작 ------- */
+.movie-chartBtn--wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.movie-chart--wrap { background-color: rgba(232, 232, 232, 0.37); }
+.movie-chart--wrap > .contents { padding: 50px 30px 60px; }
+
+.chartBtn--wrap {
+    display: inline-flex;
+}
+
+/* .chartBtn--wrap h3 {
+    height: auto;
+    margin: 0;
+    line-height: 1em;
+    background-image: none;
+} */
+
+.chartBtn--wrap h3 ~ h3 {
+    position: relative;
+    margin-left: 32px;
+}
+
+.chartBtn--wrap h3 ~ h3:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: -16px;
+    top: 50%;
+    width: 1px;
+    height: 14px;
+    margin-top: -7px;
+    background-color: #d8d8d8;
+}
+
+.chartBtn--wrap h3 > a {
+    font-size: 26px;
+    line-height: 1.423em;
+}
+.chartBtn--wrap h3 > a.active {
+    font-weight: 700;
+    color: #222;
+}
+
+#movieChartAll {
+    padding: 4px 32px 4px 15px;
+    font-size: 14px;
+    color: #222;
+    line-height: 1.429em;
+    background: transparent url(./../img/arrowR.png) calc(100% - 7px) center / 8px 13px scroll no-repeat;
+    border: 1px solid #e2e2e2;
+    border-radius: 15px;
+    box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.05);
+}
+
+/* 차트 리스트 */
+.swriper {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+}
+
+.movieChart_list.swiper {
+    overflow: visible;
+    position: relative;
+}
+
+.pre_swiperBtn, .next_swiperBtn {
+    position: absolute;
+    z-index: 10;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    
+    overflow: hidden;
+    top: calc(50% - 2px);
+    width: 40px;
+    height: 40px;
+    margin-top: -20px;
+    font-size: 0;
+    border-radius: 50%;
+    box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.pre_swiperBtn { left: 10px; }
+.next_swiperBtn { right: 10px; }
+
+.pre_swiperBtn:after, .next_swiperBtn:after {
+    content: '';
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.8) url(./../img/arrowL.png) center / 9px 13px  no-repeat;
+}
+
+.next_swiperBtn:after { transform: rotate(-180deg); }
+
+.swiperLists_wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex    ;
+    transition-property: transform;
+    box-sizing: content-box;
+}
+
+/* 영화 1개 */
+.movieChart_wrap {
+    width: 170.4px;
+    margin-right: 32px;
+    flex-shrink: 0;
+    height: 100%;
+    /* position: relative; */
+    transition-property: transform;
+}
+
+.movieChart_wrap .img_wrap { position: relative; }
+
+.movieChart_wrap .img_wrap .img_content {
+    overflow: hidden;
+    position: relative;
+    height: 234px;
+    border-radius: 10px;
+}
+
+.img_content > img {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(0, -50%);
+}
+
+/* -- 연령제한 -- */
+.ageLimit_wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    position: absolute;
+    right: 6px;
+    top: 7px;
+}
+
+.ageLimit {
+    display: inline-flex;
+    width: 20px;
+    height: 20px;
+    border-radius: 2px;
+
+    font-size: 0;
+}
+
+.age15 { background: url(./../img/age15.svg) center / contain scroll no-repeat; }
+.ageAll { background: url(./../img/ageAll.svg) center / contain scroll no-repeat; }
+
+.detailLink-wrap { 
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: #2b2b2b9c;
+    box-shadow : 5px 5px 25px gray;
+}
+
+.detailLink-wrap a {
+    width: 120px;
+    height: 34px;
+    margin: 6px 0 0;
+
+    border-radius: 4px;
+    text-align: center;
+    line-height: 34px;
+    font-weight: 500;
+    font-size: 13px;
+    color: #ffffff;
+}
+
+a.chartDetailBtn {
+    background-color: #ffffff;
+    color: #666666;
+}
+
+a.reservationBtn { background-color: #fb4357; }
+
+.chartNum {
+    position: absolute;
+    left: 9px;
+    bottom: -4px;
+    font-weight: 400;
+    font-size: 50px;
+    font-style: italic;
+    color: #fff;
+    line-height: 1em;
+    z-index: 3;
+    text-shadow: 2px 5px 5px rgba(0, 0, 0, 0.45);
+}
+
+.movieInfo_wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.movieTitle {
+    display: block;
+    flex-basis: 100%;
+    overflow: hidden;
+    margin-top: 14px;
+
+    font-size: 18px;
+    font-weight: 500;
+    color: #222;
+    text-align: center;
+    line-height: 1.167em;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.movieInfo_wrap > span {
+    margin-top: 9px;
+    font-size: 14px;
+    color: #444;
+}
+
+.movieInfo_wrap > span img {
+    width: 16px;
+    height: 16px;
+    vertical-align: top;
+}
+
+.movieInfo_wrap span ~ span {
+    position: relative;
+    padding-left: 16px;
+}
+
+.movieInfo_wrap span ~ span::before {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 50%;
+    width: 1px;
+    height: 10px;
+    margin-top: -5px;
+    background-color: #ededed;
+}
