@@ -1,0 +1,25 @@
+<!-- 2. DOM - .getElementByClassName()-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>getElementByClassName</title>
+</head>
+<body>
+  <div class="myDiv">1번째 DIV 태그</div>
+  <div class="myDiv">2번째 DIV 태그</div>
+  <div>3번째 DIV 태그</div>
+</body>
+<script>
+  const div = document.getElementsByClassName("myDiv");
+  console.log(div); // 해당 클래스명을 가진 태그가 2개이기 때문에 2개가 한번에 나옴
+
+  // 각 태그의 요소를 확인하고 싶다면 반복문을 돌려서 각각 출력해주면 됨
+  for (let i = 0; i < div.length; i++) {
+    console.log(div[i]);
+    console.log(div[i].innerText);
+    console.log(div[i].innerHTML);
+  }
+</script>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 03</title>
+</head>
+<body>
+  <ul>
+    <li>아이템 1</li>
+    <li>아이템 2</li>
+    <li>아이템 3</li>
+  </ul>
+</body>
+<script>
+  // 클래스 이름을 추가하고 li 요소의 텍스트를 "새 아이템입니다"로 변경하기
+  // 첫번째 li 요소에는 css 선택자를 사용하여 글자 색상을 red로 변경하기
+  const lists = document.querySelectorAll('li');
+  lists.forEach((list, idx) => {
+    list.classList.add('list');
+    list.innerText = "새 아이템 " + (idx + 1) + " 입니다."
+  });
+
+  // lists[0].style.color = 'red';
+  document.querySelector('li').style.color = 'red';
+
+</script>
+</html>

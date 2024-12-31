@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이벤트 기초</title>
+</head>
+<body>
+  <h1>JavaScript</h1>
+  <!-- 이벤트를 처리하기 위해 onXXXX 속성 사용 -->
+  <!-- onclick 속성은 해당 요소에 클릭 이벤트가 발생되면 실행 -->
+  <!-- 속성값 안에는 자바스크립트 명령어 작성 -->
+  <button onclick="alert('클릭했습니다.')">버튼1</button>
+  <button onclick="test()">버튼2</button>
+</body>
+<script>
+  function test() {
+    alert("함수 호출");
+  }
+</script>
+</html>

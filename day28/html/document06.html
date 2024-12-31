@@ -1,0 +1,26 @@
+<!-- 6. DOM - .querySelectorAll()-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>querySelectorAll</title>
+</head>
+<body>
+  <h1>과일 리스트</h1>
+  <ol>
+    <li>체리</li>
+    <li>오렌지</li>
+    <li>귤</li>
+    <li>포도</li>
+    <li>복숭아</li>
+  </ol>
+</body>
+<script>
+  const result = document.querySelectorAll("ol li");
+  console.log(result);    // NodeList(5) [li, li, li, li, li]
+  result.forEach(function(item){
+    console.log(item.innerHTML);  // li 태그의 내용만 전부 출력
+  });
+</script>
+</html>
