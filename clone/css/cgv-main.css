@@ -158,6 +158,8 @@ main {
 }
 
 /* 차트 리스트 */
+#beforeMovie_wrap { display: none;}
+
 .swriper {
     margin-left: auto;
     margin-right: auto;
@@ -176,27 +178,28 @@ main {
 .pre_swiperBtn, .next_swiperBtn {
     position: absolute;
     z-index: 10;
-    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
 
     
     overflow: hidden;
-    top: calc(50% - 2px);
+    /* top: calc(50% - 2px); */
+    top: calc(50% - 26px);
     width: 40px;
     height: 40px;
     margin-top: -20px;
     font-size: 0;
     border-radius: 50%;
     box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
 }
 
 .pre_swiperBtn {
-    left: 10px;
+    left: -20px;
     display: none;
 }
-.next_swiperBtn { right: 10px; }
+.next_swiperBtn { right: -20px; }
 
 .pre_swiperBtn:after, .next_swiperBtn:after {
     content: '';
@@ -223,6 +226,7 @@ main {
     flex-shrink: 0;
     height: 100%;
     /* position: relative; */
+    transition: 0.4s;
     transition-property: transform;
 }
 

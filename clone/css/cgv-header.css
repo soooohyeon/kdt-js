@@ -132,8 +132,7 @@ button { border: 0 none; }
 nav {
     position: absolute;
     left: 0;
-    /* top: 113px; */
-    top: 193px;
+    /* top: 193px; */
     width: 100%;
     height: 0;
     padding: 4px 0;
