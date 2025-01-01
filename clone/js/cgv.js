@@ -60,9 +60,11 @@ adSoundBtn.addEventListener('click',() => {
 });
 
 // ---------- 무비차트 | 상영예정작 ----------
-// 영화에 마우스 올라가면 생기는 이벤트
-const movieLists = document.querySelectorAll('.img_wrap');
-movieLists.forEach(movie => {
+const movieImgs = document.querySelectorAll('.img_wrap');
+movieImgs.forEach((movie, idx) => {
+    // 순위 표시
+    movie.children[1].innerHTML = idx + 1;
+    
     function over(){
         movie.children[1].style.display='none';
         movie.children[2].style.display='flex';
@@ -71,18 +73,56 @@ movieLists.forEach(movie => {
         movie.children[1].style.display='flex';
         movie.children[2].style.display='none';
     }
+
+    // 영화 포스터에 마우스 올라가면 생기는 이벤트
     movie.addEventListener('mouseover', over);
     movie.addEventListener('mouseout', out);
 });
 
 // swiper 버튼 활성화
 const preBtn = document.querySelector('.pre_swiperBtn');
-const clickCount = 0;
-// movieLists.forEach((movie, idx) => {
-//     if (idx === 0) {
-//         preBtn.style.display = 'none';
-//     } else {
-//         preBtn.style.display = 'flex';
+const nextBtn = document.querySelector('.next_swiperBtn');
+let clickCount = 0;
+function showSwiperBtn() {
+    if (clickCount === 0) {
+        preBtn.style.display = 'none';
+        nextBtn.style.display = 'flex';
+    } else if (clickCount === 3) {
+        preBtn.style.display = 'flex';
+        nextBtn.style.display = 'none';
+    } else {
+        preBtn.style.display = 'flex';
+        nextBtn.style.display = 'flex';
+    }
+}
 
-//     }
-// });
+// swiper 버튼 클릭시 포스터 넘기기
+const movieLists = document.querySelectorAll('.movieChart_wrap');
+const width = movieLists[0].offsetWidth + 32.391;   // 한 포스터의 가로 길이
+console.log(width);
+
+function nextmovie() {
+    clickCount++;
+    for (let i = 0; i < movieLists.length; i++) {
+        if (clickCount * 5 < i < clickCount * 5 + 4) {
+            console.log(movieLists[i].children[1]);
+            movieLists[i].style.transform = `translateX(${-(width * (clickCount * 5))}px)`;
+        }
+    }
+    showSwiperBtn();
+    console.log(clickCount);
+}
+
+function premovie() {
+    for (let i = 0; i < movieLists.length; i++) {
+        if (clickCount * 5 < i < clickCount * 5 + 4) {
+            console.log(movieLists[i].children[1]);
+            movieLists[i].style.transform = `translateX(${+(width * (clickCount * 5))}px)`;
+        }
+    }
+    clickCount++;
+    showSwiperBtn();
+    console.log(clickCount);
+}
+nextBtn.addEventListener('click', nextmovie);
+

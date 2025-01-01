@@ -96,14 +96,18 @@ main {
 
 /* --------------------------------------------------------------------- */
 /* ------- 무비차트 | 상영예정작 ------- */
+.movie-chart--wrap { background-color: rgba(232, 232, 232, 0.37); }
+.movie-chart--wrap > .contents {
+    padding: 50px 30px 60px;
+    overflow: hidden;
+}
+
 .movie-chartBtn--wrap {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 20px;
 }
-.movie-chart--wrap { background-color: rgba(232, 232, 232, 0.37); }
-.movie-chart--wrap > .contents { padding: 50px 30px 60px; }
 
 .chartBtn--wrap {
     display: inline-flex;
@@ -188,7 +192,10 @@ main {
     box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-.pre_swiperBtn { left: 10px; }
+.pre_swiperBtn {
+    left: 10px;
+    display: none;
+}
 .next_swiperBtn { right: 10px; }
 
 .pre_swiperBtn:after, .next_swiperBtn:after {
