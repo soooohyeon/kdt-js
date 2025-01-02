@@ -1,0 +1,20 @@
+<!-- 4. defer 속성 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>defer 속성</title>
+</head>
+<body>
+  <p>defer 속성이 있는 script 태그 전 p태그 입니다</p>
+  <script>
+    document.addEventListener("DOMContentLoaded", ()=>{
+      alert("`defer` 스크립트가 실행 된 후, DOM이 준비되었습니다")
+    });
+  </script>
+  
+  <script defer src="https://javascript.info/article/script-async-defer/long.js?speed=1"></script>
+  <p>스크립트 뒤 콘텐츠</p>
+</body>
+</html>

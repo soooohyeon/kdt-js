@@ -13,6 +13,8 @@ main {
     background-color: #000;
 }
 
+/* #main-banner--wrap .contents { width: 100%; } */
+
 .ad-movie--wrap {
     position: relative;
     width: 100%;

@@ -1,0 +1,30 @@
+<!-- 0. 아침 실습 (복습) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ToDoList</title>
+  <script defer src="./../js/toDoList.js"></script>
+  <style>
+    ul { list-style-type: square; }
+    li { margin: 10px 0; }
+    .delete { margin-left: 20px;}
+    input {
+      width:200px;
+      height: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div id="todo-list">
+    <h2>ToDo List</h2>
+    <ul>
+      <li>javasctipt<button class="delete">삭제</button></li>
+      <li>DOM 연습<button class="delete">삭제</button></li>
+    </ul>
+    <input type="text id" id="new-item" placeholder="새로운 할일 목록을 추가하세요">
+    <button id="add-item">추가</button>
+  </div>
+</body>
+</html>

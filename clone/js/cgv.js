@@ -1,6 +1,6 @@
 
 // ---------- 최상단 광고 닫기 ----------
-console.log(document.querySelector('#ad-wrap-top-container'));
+// console.log(document.querySelector('#ad-wrap-top-container'));
 const adClose = document.querySelector('.ad-top-close');
 adClose.addEventListener('click', () => {
     document.querySelector('#ad-wrap-top-container').remove();
@@ -83,10 +83,23 @@ movieTab[1].addEventListener('click', () => {
 });
 
 // 영화 포스터 이벤트
+
+// 순위 표시
+const movieNumLists = document.querySelectorAll('.movieChart_list');
+for (let i in movieNumLists) {
+    console.log("카테고리 : " + movieNumLists.length);
+    console.log("카테고리 : " + i);
+    console.log("영화 : " + movieNumLists[0].children[1].childNodes[1]);
+//     movieNumLists[i].forEach((movie, idx) => {
+//         console.log(movie.children[2]);
+//     });
+}
+
+
 const movieImgs = document.querySelectorAll('.img_wrap');
 movieImgs.forEach((movie, idx) => {
-    // 순위 표시
-    movie.children[1].innerHTML = idx + 1;
+    // // 순위 표시
+    // movie.children[1].innerHTML = idx + 1;
     
     function over(){
         movie.children[1].style.display='none';

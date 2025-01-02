@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+ul { list-style-type: none;  }
+
+body { background-color: cornsilk; }
+
+nav {
+  height: auto;
+  margin-top: 50px;
+  background-color: cornflowerblue;
+}
+
+nav > ul {
+  display: flex;
+}
+
+nav > ul li {
+  padding: 10px 10px;
+  width: 80px;
+  text-align: center;
+  cursor: pointer;
+}
+
+nav > ul li:hover {
+  background-color: rgb(55, 99, 181);
+}
+
+main {
+  height: 100vh;
+  background-color: lightgray;
+}
+
+footer {
+  height: 120px;
+  background-color: lightpink;
+}
+
+.modal-box {
+  display: none;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: lightyellow
+}
+
+.login-box {
+  display: flex;
+  width: 270px;
+  margin: auto;
+  padding: 20px 30px;
+  background-color: #ffffff;
+}
+
+form > h1 { margin-bottom: 10px;}
+form > div { margin-top: 5px;}
+
+.login-btn-wrap > button {
+  float: right;
+  margin-top: 10px;
+}
+
+.x-box {
+  font-size: 25px;
+  font-weight: bold;
+  color: gray;
+  text-align: right;
+  cursor: pointer;
+}
+.x-box:hover { color: red;}
+
+
+/* vh는 뷰포트(사용자 기기화면)를 기준으로 크기가 결정된다
+20vh 사용자화면의 20%를 의미한다*/
+/* header{
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+main{ height: 60vh; }
+footer{ height: 20vh; }
+nav{ height: 25%; } */
