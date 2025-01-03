@@ -52,7 +52,7 @@ function updatePagination(currentPage) {
   });
 
   // 현재 페이지 번호에 'acitve' 클래스 추가
-  pagenationWrap.querySelector(`li:nth-child(${currentpage})`).classList.add('active');
+  pagenationWrap.querySelector(`li:nth-child(${currentPage})`).classList.add('active');
 }
 // 페이지 번호 생성 및 이벤트 핸들러 추가
 for (let i = 1; i <= totalPage; i++) {
