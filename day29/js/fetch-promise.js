@@ -1,6 +1,6 @@
 // 12.
 
-// urt의 데이터를 가져옴 -> promise 객체
+// url의 데이터를 가져옴 -> promise 객체
 // fetch("https://jsonplaceholder.typicode.com/users").then((response) => response.json()).then(console.log)
 
 fetch("https://jsonplaceholder.typicode.com/users")
