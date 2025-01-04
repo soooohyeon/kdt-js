@@ -1,22 +1,22 @@
-// 2. Object 객체
+// // 2. Object 객체
 
-const user = {
-  name : '신짱구',
-  age : 5,
-  address : '서울시',
-  introduce : () => console.log("안녕하세요"),
-};
+// const user = {
+//   name : '신짱구',
+//   age : 5,
+//   address : '서울시',
+//   introduce : function () { console.log("안녕하세요"); }
+// };
 
-console.log(user, typeof user);
-console.log(user.introduce);  // [Function: introduce]
-user.introduce; // 안녕하세요
+// console.log(user, typeof user);
+// console.log(user.introduce);  // [Function: introduce]
+// user.introduce(); // 안녕하세요
 
-console.log(user['name']);  // 신짱구
-// .으로 직접 접근 가능하고, key값의 규칙성이 필요하다면 [''] 문법 사용해서 접근 가능
+// console.log(user['name']);  // 신짱구
+// // .으로 직접 접근 가능하고, key값의 규칙성이 필요하다면 [''] 문법 사용해서 접근 가능
 
-// 1. programming 객체 생성(const로 생성)
-//프로퍼티 키는 pro1~pro4까지
-//프로퍼티 값은 java, dbms, html/css, javascript
+// // 1. programming 객체 생성(const로 생성)
+// //프로퍼티 키는 pro1~pro4까지
+// //프로퍼티 값은 java, dbms, html/css, javascript
 const programming = {
   pro1 : 'java',
   pro2 : 'dbms',
@@ -24,21 +24,21 @@ const programming = {
   pro4 : 'javascript',
 };
 
-// 2. 객체 출력
-console.log(programming);
+// // 2. 객체 출력
+// console.log(programming);
 
-// 3. javascript만 출력하기(방법2개)
-console.log(programming.pro4);
-console.log(programming['pro4']);
+// // 3. javascript만 출력하기(방법2개)
+// console.log(programming.pro4);
+// console.log(programming['pro4']);
 
-// 4. pro1의 값을 자바로 변경
-programming.pro1 = '자바';
-console.log(programming);
+// // 4. pro1의 값을 자바로 변경
+// programming.pro1 = '자바';
+// console.log(programming);
 
-// 5. pro5 객체 추가 프로퍼티 값은 git
-programming.pro5 = 'git';
-console.log(programming);
-// const는 재할당이 안되어야 하지만 객체에서는 생성했더라도 프로퍼티 추가, 수정 가능
+// // 5. pro5 객체 추가 프로퍼티 값은 git
+// programming.pro5 = 'git';
+// console.log(programming);
+// // const는 재할당이 안되어야 하지만 객체에서는 생성했더라도 프로퍼티 추가, 수정 가능
 
 // 6. 객체의 값 출력
 for (let i in programming) {

@@ -15,7 +15,7 @@ function func2() {
 function func3() {
   setTimeout(function() {
     console.log("함수 3 실행");
-  }, 500); // 1초 뒤 실행
+  }, 500); // 0.5초 뒤 실행
 }
 
 func1();

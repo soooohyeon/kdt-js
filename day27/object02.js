@@ -2,7 +2,7 @@
 // new 뒤에 나오는 생성자를 자바스크립트에서는 프로토 타입 이라고 부름
 // 단, 반드시 대문자로 시작해야함
 
-function User(id, pw, name, age, subject='javascript'){
+function User(id, pw, name, age, subject='js'){
   this.id = id;             // 새 객체의 id 프로퍼티
   this.pw = pw;             // 새 객체의 pw 프로퍼티
   this.name = name;
