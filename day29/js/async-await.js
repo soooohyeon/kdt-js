@@ -13,7 +13,7 @@
 
 async function fetchData() {
   // 2초 후 데이터를 반환하는 비동기 함수
-  return new Promise(() => {
+  return new Promise((resolve) => {
     setTimeout(() => {
       resolve("데이터 로드 완료");
     }, 2000);
